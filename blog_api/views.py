@@ -2,18 +2,14 @@
 
 from rest_framework import generics
 from .models import BlogPost
-from .serializers import BlogEntrySerializer
+from .serializers import BlogEntrySerializer,RegisterSerializer
 from .tasks import index_blog_post
 from elasticsearch_dsl import Search
 from elasticsearch_dsl.query import MultiMatch
-# views.py
-
-from rest_framework import generics
 from django.contrib.auth.models import User
 from rest_framework.permissions import AllowAny
 from rest_framework.response import Response
 from rest_framework import status
-from .serializers import RegisterSerializer
 from rest_framework.permissions import IsAuthenticated
 class RegisterView(generics.CreateAPIView):
     queryset = User.objects.all()
