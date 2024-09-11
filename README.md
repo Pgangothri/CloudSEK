@@ -14,6 +14,8 @@ Before you begin, ensure you have met the following requirements:
    ```bash
    git clone https://github.com/Pgangothri/CloudSEK.git
    cd your-project
+   python -m venv env
+  source env/bin/activate  # On Windows use `env\Scripts\activate`
 2. Build Docker Images:
    ```bash
    docker-compose build
