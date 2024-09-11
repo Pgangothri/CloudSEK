@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: bb-demo
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: bb-demo
+  template:
+    metadata:
+      labels:
+        app: bb-demo
+    spec:
+      containers:
+      - name: bb-site
+        image: pgangothri054/bloggingservice:latest
+        ports:
+        - containerPort: 8000
+        command: ["/bin/sh"]
+        args: ["-c", "python manage.py migrate && python manage.py runserver 0.0.0.0:8000"]
+        env:
+        - name: HOST
+          value: "0.0.0.0"
+        - name: PORT
+          value: "8000"
+        - name: PROTOCOL
+          value: "http"
