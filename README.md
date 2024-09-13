@@ -8,7 +8,7 @@ Before you begin, ensure you have met the following requirements:
 - (http://localhost:8000/api/token/)
 - (http://localhost:8000/api/token/refresh/)
 - (http://localhost:8000/api/submit/)
-- (http://localhost:8000/api/search/)
+- (http://localhost:8000/api/search/?query=text)
 ## Getting Started
 1. Clone the repository:
    ```bash
