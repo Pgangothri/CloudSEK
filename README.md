@@ -1,4 +1,4 @@
-# Blog Website using Djanog Rest Framework
+# Blog Website using Django Rest Framework
 ## Prerequisites
 
 Before you begin, ensure you have met the following requirements:
@@ -15,7 +15,8 @@ Before you begin, ensure you have met the following requirements:
    git clone https://github.com/Pgangothri/CloudSEK.git
    cd your-project
    python -m venv env
-  source env/bin/activate  # On Windows use `env\Scripts\activate`
+   source env/bin/activate  # On Windows use `env\Scripts\activate`
+   
 2. Build Docker Images:
    ```bash
    docker-compose build
